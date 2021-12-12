@@ -7,16 +7,11 @@ const int NUM = 12;
 
 int main() {
   string s;
-  vector<string> inputs;
+  vector<string> oxygen;
   while (cin >> s) {
-    inputs.push_back(s);
+    oxygen.push_back(s);
   }
-
-  vector<string> oxygen, co2;
-  for (string tmp : inputs) {
-    oxygen.push_back(tmp);
-    co2.push_back(tmp);
-  }
+  vector<string> co2 = oxygen;
 
   // fill up oxygen first
   for (int i = 0; i < NUM; ++i) {
@@ -57,10 +52,6 @@ int main() {
         newCo2.push_back(co2[j]);
       }
     }
-    /* for (string s : newCo2) { */
-    /*   cout << s << ", "; */
-    /* } */
-    /* cout << "\n"; */
     co2 = newCo2;
   }
 
