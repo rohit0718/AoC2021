@@ -11,8 +11,8 @@ int main() {
     v.push_back(n);
   }
 
-  int DAYS = 256;
-  while (DAYS) {
+  int days = 80;
+  while (days) {
     int sz = v.size();
     for (int i = 0; i < sz; ++i) {
       if (!v[i]) {
@@ -22,8 +22,9 @@ int main() {
       }
       v[i]--;
     }
-    DAYS--;
+    days--;
   }
+
   cout << v.size() << "\n";
 } 
 
