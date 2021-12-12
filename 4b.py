@@ -37,14 +37,14 @@ for line in stdin:
         boards.append(board)
         board = []
 
+seen = {}
 res = None
 for num in nums:
     for i in range(len(boards)):
         mark(boards[i], num)
-        if check(boards[i]):
+        if check(boards[i]) and i not in seen:
+            seen[i] = True
             res = solve(boards[i], num)
-            break
-    if res != None: break
 
 print(res)
 
